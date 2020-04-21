@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HoldenGerner</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body {
+        margin: 0;
+        padding:0;
+    }
+    header {
+        font-family: serif;
+        background-image: url(https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Colorful-Geometric-Simple-Background-Image.jpg);
+        background-size: cover;
+        max-width: 100%;
+        color: white;
+    }
+    header h1 {
+        font-family: sans-serif;
+        font-weight: 600;
+        text-align: start;
+        
+    }
+    header .row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    header nav {
+        display:inline-flex;
+        justify-content: flex-start;
+        padding: 0 100px;
+    
+    }
+    .tablink {
+        color:white;
+        border: none;
+        background-color: inherit;
+        padding: 14px 28px;
+        font-size: 20px;
+        cursor: pointer;
+        display: inline-block;
+        font-family:sans-serif;
+        text-decoration: none;
+        
+    
+    }
+    .tablink:hover{
+        color: #89cff0;
+
+
+    }
+    h2 {
+        align-items:center;
+        background-color: plum;
+        color: white;
+        font-size: 3em;
+        font-family:sans-serif;
+        border: none;
+        width: 300px;
+        padding: 10px;
+        margin:0;
+        text-align:center;
+    }
+    
+    .row {
+        display: inline-flex;
+        justify-content: flex-start;
+        padding: 10px;
+        margin: 0;
+        padding:0;
+
+    }
+    body {
+        padding: 0;
+        margin: 0;
+        max-width: 100% !important;        
+    }
+   
+    footer{
+        
+        
+        text-align: center;
+        align-items: center;
+        font-family: sans-serif;
+        margin:0 auto;
+        padding:0;
+        max-width: 100%;
+    }
+    #AboutMe {
+        margin:0;
+        padding:0;
+        
+    }
+    #AboutMe-P {
+        width: 40em;
+        padding:15px;
+        padding-left: 20px;
+        border: none;
+        font-family: sans-serif;
+        line-height: 1.5;
+        
+     
+    }
+    
+    
+    #Education {
+        background-color: #f4f4f4;
+        align-items: center;
+    }
+    table {
+        height:80%;
+        margin-left: 10%;
+        margin-right:10%;
+        margin-bottom: 10%;
+        margin-top: 10%;
+        padding:5px;
+        max-width: 100%;
+        align-items:center;
+        font-family: sans-serif;
+    }
+    thead {
+        background-color:#FF7CA4;
+        margin: 0;
+        padding:0;
+        max-width: 100%;
+
+    }
+    th,td{
+        border:1px solid #FF7CA4;
+        margin:0;
+        padding:10px;
+        text-align: center;
+    }
+    a{
+        margin:25px;
+        
+    }
+    caption {
+        font-family: sans-serif;
+        font-size: 25px;
+    }
+    #Python {
+        font-size:2em;
+        align-items: center;
+        margin-left:40%;
+        font-family: sans-serif;
+        padding:0;
+    }
+    #Python > p {
+        align-items:center;
+        background-color: blue;;
+        color: white;
+        font-size: 1.5em;
+        font-family:sans-serif;
+        border: none;
+        padding:10px;
+    }
+    #HTML {
+        font-size:2em;
+        align-items: center;
+        margin-left:40%;
+        font-family: sans-serif;
+        padding:0;
+    }
+    #HTML > p {
+        align-items:center;
+        background-color: orangered;
+        color: white;
+        font-size: 1.5em;
+        font-family:sans-serif;
+        border: none;
+        padding:10px;
+    }
+    #SQL {
+        font-size:2em;
+        align-items: center;
+        margin-left:40%;
+        font-family: sans-serif;
+        padding:0;
+    }
+    #SQL > p {
+        align-items:center;
+        background-color: #2275E3  ;
+        color: white;
+        font-size: 1.5em;
+        font-family:sans-serif;
+        border: none;
+        padding:10px;
+    }
+    #JavaScript {
+        font-size:2em;
+        align-items: center;
+        margin-left:40%;
+        font-family: sans-serif;
+        padding:0;
+    }
+    #JavaScript > p {
+        align-items:center;
+        background-color:yellow  ;
+        color: black;
+        font-size: 1.5em;
+        font-family:sans-serif;
+        border: none;
+        padding:10px;
+    }
+    #ContactMe {
+        background-color: #f4f4f4;
+        align-items: center;
+        margin-bottom: 0;
+        
+    }
+    .loader {
+        position: fixed;
+        z-index: 99;
+        top:0;
+        left: 0;
+        width:100%;
+        height:100%;
+        background-color:white;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    
+    .loader.hidden {
+        animation:  fadeOut 1s ;
+        animation-fill-mode: forwards;
+        animation-delay: 1.5s;
+    }
+
+
+    @keyframes fadeOut{
+        100% {
+            opacity:0;
+            visibility: hidden;
+            
+        }
+    }
+    #Skillsh2 {
+        align-items:center;
+        background-color: plum;
+        color: white;
+        font-size: 2.5em;
+        font-family:sans-serif;
+        border: none;
+        width: 350px;
+        padding:0;
+        margin-left:45%;
+        margin-bottom:2%;
+        text-align:center;
+    }
+    #Skillsh3{
+        align-items:center;
+        background-color: white;
+        color: black;
+        font-size: 1em;
+        font-family:sans-serif;
+        border: none;
+        width: 350px;
+        padding:0;
+        margin-left:45%;
+        margin-bottom:2%;
+        text-align:center;
+
+
+    }
+    #contacth3 {
+        align-items:center;
+        background-color: plum;
+        color: white;
+        font-size: 1.5em;
+        font-family:sans-serif;
+        border: none;
+        width: 400px;
+        padding:0;
+        margin-left:25%;
+        margin-bottom:2%;
+        text-align:center;
+    }
+    
+    #forms{
+        margin-left:75%;
+        align-items:center;
+        text-align:center;
+        
+    }
+    .column {
+        margin-left:50%;
+    }
+    #social {
+        align-items: center;
+        text-align:center;
+        margin-left:25%;
+    }
+    #formh3 {
+        align-items:center;
+        background-color: plum;
+        color: white;
+        font-size: 1.5em;
+        font-family:sans-serif;
+        border: none;
+        width: 300px;
+        padding:0;
+        
+        margin-bottom:2%;
+        text-align:center;
+    }
+    form{
+        text-align: left;
+        font-family: sans-serif;
+
+    }
+    input[type="submit"] {
+        border:none;
+        background-color: plum;
+        color:white;
+        font-size: medium;
+        cursor:pointer;
+    }
+
+   
+</style>
+
+</head>
+
+<body>
+    <div class="loader">
+        <img src="giphy3.gif">
+    </div>
+    <!--This is JavaScript for my loading screen-->
+    <script> 
+        window.addEventListener("load",function() {
+            const loader= document.querySelector(".loader");
+            loader.className += " hidden";
+        
+
+        });
+    </script>
+    <header class="containter">
+        <div class="row">
+            <h1>Holden Gerner</h1>
+            <!--Each href is to take you to each section-->
+            <nav class="col-sm-4 text-right">
+                <a href="#AboutMe" class="tablink">About Me</a>
+                <a href="#Education" class="tablink">Education</a>
+                <a href="#Skills" class="tablink">Skills</a> 
+                <a href="#ContactMe" class="tablink">Contact Me</a>
+           </nav>
+        </div>
+       
+    </header>
+
+    <!--Instead of making other pages,I divided each part into sections-->
+    <section id="AboutMe">
+        <h2>About Me</h2>
+        <div  class="row">
+           <a>
+               <img src="IMG_2623.JPG">
+           </a>
+            <p id="AboutMe-P">I am currently a freshman at the Pennsylvania State University. 
+                My studies lie in data science. 
+                I hope to one day work in analytics or with artificial intelligence. 
+                My goal is to create techology that will change the world around us for the better. 
+                I've always had an interest in determining how things work and figuring out a more efficient and simpler way to do it. <br> <br>
+                I was borned in Bethlehem Pennsylvania and then raised in the Poconos. I attended Stroudsburg High School and graduated in 2019.
+                I have 4 brothers including a twin brother. 
+                I would say my two oldest brothers influnced me the most when it comes to my interest in the technology field. <br> <br>
+            </p>
+
+        </div>
+        
+
+    </section>
+    <br><br><br><br>
+    <section id= "Education">
+        <h2>Education</h2> <br> <br>
+       
+        <table style="width:75%">
+            <caption>Where I became smarter</caption>
+            <thead>
+                <tr>
+                    <th scope="row">Education</th>
+                    <th scope="row">Years Completed</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src=https://pbs.twimg.com/profile_images/988470436953440256/o_wsZXsS_400x400.jpg height=25 width=25/>Stroudsburg Highschool</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td><img src=https://onwardstate.com/wp-content/uploads/2014/10/logo.jpg height=25 width=25/>   Pennsylvania State University</td>
+                    <td>Currently a freshman</td>
+                </tr>
+            </tbody>
+        
+        </table> <br><br><br>
+        <table style="width:75%">
+            <caption>Classes I've Taken so far</caption>
+            <thead>
+                <tr>
+                    <th scope="row">First Semester</th>
+                    <th scope="row">Second Semester</th>
+                </tr>
+            </thead>
+                <tbody>
+                    <tr>
+                        <td> ARTH 111</td>
+                        <td>ENGL 15</td>
+                    </tr>
+                    <tr>
+                        <td>ASTRO 1</td>
+                        <td>PSYCH 100</td>
+                    </tr>
+                    <tr>
+                        <td>CMPSC 131</td>
+                        <td>CMPSC 132</td>
+                    </tr>
+                    <tr>
+                        <td>STATS 200</td>
+                        <td>IST 210</td>
+                    </tr>
+                    <tr>
+                        <td>ESC 121</td>
+                        <td>IST 250</td>
+                    </tr>
+                </tbody>
+            
+        </table> <br><br><br>
+
+
+    </section>
+    <section id="Skills">
+        <h2>Skills</h2> <br> <br> 
+        <h2 id="Skillsh2">THINGS I CAN DO</h2>
+        <h2 id=Skillsh3>Tap on the icons to learn these langauges!</h2>
+
+        <!--Each image is a link to each code's website-->
+        <div id="Python" class="row">
+            <a href="https://www.python.org">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1024px-Python-logo-notext.svg.png" style="width:90px">
+            </a>
+            <p>Python</p>
+        </div>
+        <br>
+        <div id="HTML" class="row">
+            <a href="https://html.com">
+                <img src="https://i.ya-webdesign.com/images/html-5-logo-png-19.png" style="width:90px">
+            </a>
+            <p>HTML</p>
+        </div>
+        <br>
+        <div id="SQL" class="row">
+            <a href="https://www.codecademy.com/learn/learn-sql">
+                <img src="https://www.dmcinfo.com/DesktopModules/DnnForge%20-%20NewsArticles/ImageHandler.ashx?Width=925&Height=400&HomeDirectory=%2FPortals%2F0%2F&FileName=Blog+Pictures%2FSQL+Logo.jpg&PortalID=0&q=1" style="width:90px">
+            </a>
+            <p>SQL</p>
+        </div>
+        <br>
+        <div id="JavaScript" class="row">
+            <a href="https://www.javascript.com">
+                <img src="data:image/png;base64,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" style="width:90px">
+            </a>
+            <p>JavaScript</p>
+        </div>
+
+    </section>
+    <!--I made the contact section into 2 columns so it's easier to use-->
+    <section id="ContactMe">
+        <h2>Contact Me</h2>
+
+       <!--Each image takes you to my social media page-->
+        <div class="row">
+            <div id="social" class="column">
+                <h3 id="contacth3">IF YOU WANT TO CONNECT WITH ME, CLICK ON THE ICONS </h3>
+                <a href="https://www.instagram.com/hjgerner/">
+                    <img src="https://www.freepnglogos.com/uploads/instagram-logos-png-images-free-download-2.png" style="width:110px; margin-left:25%; margin-bottom:5%;">
+        
+                </a> <br>
+                <a href="https://www.facebook.com/holden.gerner">
+                    <img src="https://cdn.clipart.email/61a3d4e9d49a57c057a9371d2de8d531_transparent-background-facebook-logo-clipart_1600-1600.png" style="width:100px; margin-left:25%; margin-bottom:5%;">
+
+                </a><br>
+                <a href="https://twitter.com/gernerholden">
+                    <img src="https://www.net-aware.org.uk/siteassets/images-and-icons/application-icons/app-icons-twitter.png?w=585&scale=down" style="width:100px; margin-left:25%; margin-bottom:5%;">
+                </a><br>
+                <a href="https://www.youtube.com/channel/UChaySGwQLndl-Eejo9fxZnQ">
+                    <img src="https://toppng.com/uploads/preview/youtube-logo-transparent-png-pictures-transparent-background-youtube-logo-11562856729oa42buzkng.png" style="width:100px; margin-left:25%; margin-bottom: 5%;">
+                </a>
+            </div>
+            <div id="forms" class="column">
+                <h3 id=formh3>LEAVE YOUR INFO AND A MESSAGE</h3>
+                <form method="POST" action="mailto:hgerner19@gmail.com">
+                    <label for="first">First Name:</label><br>
+                    <input type="text" id="first" name="first"><br>
+                    <label for="last">Last Name:</label><br>
+                    <input type="text" id="last" name="last"><br>
+                    <label for="mail">Email:</label><br>
+                    <input type="email" id="mail" name="email"><br>
+                    <label for="message">Leave a Message:</label><br>
+                    <textarea name="message" style="width:200px; height:300px;"></textarea><br>
+                    <input type="submit" value="Submit">
+                </form>
+
+            </div>
+        </div>
+       
+    </section>
+
+   <footer>
+       <!--Inculded both emails for pesonal and school use-->
+        <p>Personal Email: hgerner19@gmail.com</p>
+        <p>School Email: HJG5199@psu.edu</p>
+
+        <!--Javascript for graduation year-->
+        <p id="Footer"> &copy;<script>document.write(new Date().getFullYear()+3)</script> </p>
+    
+    </footer>
+        
+</body>
+</html>
